@@ -57,9 +57,9 @@ const Game = () => {
   const moves = history.map((step, move) => {
     const desc = move ? `Ir para movimento #${move}` : "Iniciando Jogo";
     return (
-      <li key={move} className="list-unstyled">
+      <li key={move} className="list-unstyled ">
         <button
-          className="btn btn-outline-dark border-0"
+          className="btn btn-outline-dark border-0 text-white"
           onClick={() => jumpTo(move)}
         >
           {desc}
@@ -70,7 +70,7 @@ const Game = () => {
 
   let status;
   if (winner) {
-    status = `Vencedor: ${winner}`;
+    status = `Vencedor: Jogador ${winner}`;
   } else if (stepNumber === 9) {
     status = "Empate";
   } else {
@@ -79,8 +79,8 @@ const Game = () => {
 
   return (
     <div className="">
-      <Board squares={current.squares} onClick={handleClick} />
-      {status}
+      <Board className="" squares={current.squares} onClick={handleClick} />
+      <div className="text-white">{status}</div>
       {moves}
     </div>
   );

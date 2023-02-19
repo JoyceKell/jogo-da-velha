@@ -15,7 +15,7 @@ class Board extends React.Component {
   render() {
     return (
       <div>
-        <div className="flex pt-3">
+        <div className="flex pt-3 ">
           {this.renderSquare(0)}
           {this.renderSquare(1)}
           {this.renderSquare(2)}
